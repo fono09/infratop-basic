@@ -1,0 +1,30 @@
+<% if @book.errors.any? %>
+  <p>errors</p>
+  <ul>
+    <% @book.errors.full_messages.each do |m| %>
+      <li><%= m %></li>
+    <% end %>
+  </ul>
+<% end %>
+
+<% if @book.id %>
+  <%= form_with model: @book, url: book_path(@book.id) do |f| %>
+    <%= f.text_field :title %>
+    <%= f.text_area :body %>
+    <%= @book.id %>
+    <%= @book.title %>
+    <%= @book.body %>
+    <%= f.submit "Update Book" %>
+  <% end %>
+<% else %>
+  <%= form_with model: @book, url: books_path do |f| %>
+    <%= f.text_field :title %>
+    <%= f.text_area :body %>
+    <%= @book.id %>
+    <%= @book.title %>
+    <%= @book.body %>
+    <%= f.submit "Create Book" %>
+  <% end %>
+<% end %>
+
+  

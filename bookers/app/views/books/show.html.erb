@@ -1,0 +1,16 @@
+<h1>Books#show</h1>
+<% if @book.errors.any? %>
+  <p>errors</p>
+  <ul>
+    <% @book.errors.full_messages.each do |m| %>
+      <li><%= m %></li>
+    <% end %>
+  </ul>
+<% end %>
+
+<p id="notice"><%= notice %></p>
+<p>タイトル: <%= @book.title %></p>
+<p>感想: <%= @book.body %></p>
+
+<%= link_to "Edit", edit_book_path(@book.id) %>
+<%= link_to "Back", books_path %>

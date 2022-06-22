@@ -1,0 +1,16 @@
+<h1>Books#index</h1>
+
+<table>
+<% @books.each do |b| %>
+  <tr>
+    <td><%= b.title %></td>
+    <td><%= b.body %></td>
+    <td><%= link_to "Show", book_path(b.id) %></td>
+    <td><%= link_to "Edit", edit_book_path(b.id) %></td>
+    <td><%= link_to "Destroy", book_path(b.id), method: :delete, data: {turbo_method: :delete} %></td>
+  </tr>
+<% end %>
+</table>
+
+<%= render 'new', { book: @book } %>
+
