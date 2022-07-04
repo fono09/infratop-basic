@@ -5,57 +5,60 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <!-- FontAwesomeの読み込み -->
     <script src="https://kit.fontawesome.com/c92c39f0ef.js" crossorigin="anonymous"></script>
+    <!-- bootstrapの読み込み -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <!-- CSSファイルの読み込み -->
     <link rel="stylesheet" href="style.css" />
     <title>CARAVAN</title>
   </head>
 
-  <body>
+  <body class="m-0 p-0">
     <!-- header -->
-    <header>
-      <h1 class="heading">
+    <header class="container-fluid">
+      <h1 class="heading text-center py-2 my-0 mx-auto fs-2">
         <a href="index.html">
           CARAVAN
         </a>
       </h1>
-      <div class="social">
-        <i class="fab fa-facebook-square"></i>
-        <i class="fab fa-twitter-square"></i>
-        <i class="fab fa-instagram"></i>
+      <div class="social position-absolute">
+        <i class="fab fa-facebook-square d-inline-block ms-4"></i>
+        <i class="fab fa-twitter-square d-inline-block ms-4"></i>
+        <i class="fab fa-instagram d-inline-block ms-4"></i>
       </div>
     </header>
 
     <!-- navigation -->
     <nav>
-      <ul class="nav-list">
-        <li class="nav-list-item">
+      <ul class="nav-list text-center py-2 my-0 mx-auto list-unstyled">
+        <li class="nav-list-item d-inline-block my-0 mx-2">
           <a href="index.html">Home</a>
         </li>
-        <li class="nav-list-item">About</li>
-        <li class="nav-list-item">Topic</li>
+        <li class="nav-list-item d-inline-block my-0 mx-2">About</li>
+        <li class="nav-list-item d-inline-block my-0 mx-2">Topic</li>
       </ul>
     </nav>
 
     <!-- main-visual用のdiv -->
-    <div class="main-visual">
-      <div class="main-visual-content">
+    <div class="main-visual container-fluid p-0 m-0 d-flex justify-content-left">
+      <div class="main-visual-content m-0 text-center">
         <p class="main-visual-text">
           The world is a book<br />
           and those who do not travel<br />
           read only one page.
         </p>
-        <p class="main-visual-name">
+        <p class="main-visual-name mt-2">
           St. Augustine
         </p>
       </div>
     </div>
 
     <!-- main用のdiv -->
-    <main>
-      <section class="blog">
-        <h2 class="blog-heading">Recent Blogs</h2>
-        <div class="blog-box">
-          <div class="blog-item">
+    <main class="container-fluid row my-0 mx-auto py-5 px-0 justify-content-center">
+      <section class="blog col-8 me-4">
+        <h2 class="blog-heading text-center">Recent Blogs</h2>
+        <div class="blog-box pt-4">
+          <div class="blog-item pb-3 mb-3 d-flex justify-content-start">
             <img class="blog-image" src="img/forest.jpg" />
             <section class="blog-text">
               <h3 class="blog-text-heading">
@@ -69,7 +72,7 @@
               <span class="category">Nature</span>
             </section>
           </div>
-          <div class="blog-item">
+          <div class="blog-item d-flex justify-content-start">
             <img class="blog-image" src="img/desert.jpg" />
             <section class="blog-text">
               <h3 class="blog-text-heading">
@@ -83,7 +86,7 @@
               <span class="category">Nature</span>
             </section>
           </div>
-          <div class="blog-item">
+          <div class="blog-item d-flex justify-content-start">
             <img class="blog-image" src="img/sunset.jpg" />
             <section class="blog-text">
               <h3 class="blog-text-heading">
@@ -96,7 +99,7 @@
               <span class="category">Adventure</span>
             </section>
           </div>
-          <div class="blog-item">
+          <div class="blog-item d-flex justify-content-start">
             <img class="blog-image" src="img/italy.jpg" />
             <section class="blog-text">
               <h3 class="blog-text-heading">
@@ -109,7 +112,7 @@
               <span class="category">Nature</span>
             </section>
           </div>
-          <div class="blog-item">
+          <div class="blog-item d-flex justify-content-start">
             <img class="blog-image" src="img/asia.jpg" />
             <section class="blog-text">
               <h3 class="blog-text-heading">
@@ -133,7 +136,7 @@
           <p>>></p>
         </div>
       </section>
-      <div class="sidebar">
+      <div class="sidebar col-4">
         <section class="popular">
           <h2 class="sidebar-heading common-heading">Popular</h2>
           <div class="sidebar-contents">
